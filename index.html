@@ -6,11 +6,12 @@
 	<meta charset="UTF-8">
 	<title>WillingToAdmit</title>
 	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<!-- slick carousel -->
-<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-<!-- slick carousel -->
+	<!-- slick carousel -->
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<!-- slick carousel -->
 
 </head>
 
@@ -24,10 +25,10 @@
 
 	<div class="outermost-container">
 
-		<section>
+		<section class="fade">
 			<div class="quote">
-				<h1>I believed in Santa Claus for longer than is probably appropriate.</h1>
-				<p>27 &middot; Somerset, NJ &middot; Woman</p>
+				<h1>I split my pants skiing this winter and have the photo evidence to prove it.</h1>
+				<p>30 &middot; New York, NY &middot; Woman</p>
 			</div>
 
 			<div class="quote">
@@ -36,8 +37,8 @@
 			</div>
 
 			<div class="quote">
-				<h1>I believed in Santa Claus for longer than is probably appropriate.</h1>
-				<p>27 &middot; Somerset, NJ &middot; Woman</p>
+				<h1>I'm batman !</h1>
+				<p>25 &middot; Brooklyn, NY &middot; Male</p>
 			</div>
 
 <!--
@@ -77,12 +78,16 @@
 <!-- slick carousel js -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="slick-1.5.9/slick/slick.min.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function(){
-      $('.quote').slick({
-        setting-name: fade
+      $('.fade').slick({
+        dots: false,
+  		infinite: true,
+  		speed: 800,
+  		fade: true,
+  		cssEase: 'linear'
       });
     });
   </script>
