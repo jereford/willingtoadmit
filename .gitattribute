@@ -1,0 +1,6 @@
+app/css/index.css -diff merge-ours
+app/css/index.css.map -diff merge-ours
+app/css/libs.css -diff merge-ours
+
+app/js/bundle.js -diff merge-ours
+app/js/libs.js -diff merge-ours
