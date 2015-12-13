@@ -24,7 +24,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Fira Sans', sans-serif;
-	font-weight: 300;
+	font-weight: 200;
 	text-align: left;
 	background: linear-gradient(120deg, #ff0082, #00339f, #9b92fc);
 	background-size: 400% 400%;
@@ -82,7 +82,7 @@ body {
 }
 
 .quote {
-	width: 60%;
+	width: 80%;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -203,13 +203,15 @@ body {
 }
 
 h1 {
-	font-weight: 300;
+	font-weight: 200;
 	font-style: normal;
 	font-size: 64px;
-	line-height: 1.3em;
+	line-height: 1.15em;
 	margin: 0px;
 	padding: 0px;
 	color: #fff;
+	font-family: 'Fira Sans', sans-serif;
+	padding-bottom: .5em;
 }
 
 h2 {
@@ -217,13 +219,18 @@ h2 {
 	font-size: 32px;
 	color: #777;
 	line-height: 1.6em;
+	font-family: 'Fira Sans', sans-serif;
 }
 
 p {
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 200;
 	line-height: 1.8em;
 	color: #fff;
+	font-family: 'Fira Sans', sans-serif;
+	background-color: #ff0082;
+	padding: 0px 3px;
+	display: inline;
 }
 
 em {
