@@ -1,23 +1,27 @@
 
 var gulp = require('gulp'),
-	hint = require('gulp-jshint'),
-	uglify = require('gulp-uglify'),
-	rename = require('gulp-rename'),
-	mincss = require('gulp-cssmin'),
+	browserify = require('gulp-browserify'),
+	cache = require('gulp-cache'),
 	clean = require('gulp-clean'),
 	concat = require('gulp-concat'),
+	declare = require('gulp-declare'),
+	flatten = require('gulp-flatten'),
 	filter = require('gulp-filter'),
-	browserify = require('gulp-browserify'),
 	imSoStylish = require('jshint-stylish'),
+	cssmin = require('gulp-cssmin'),
+	rename = require('gulp-rename'),
 	sass = require('gulp-ruby-sass'),
-	web = require('gulp-webserver');
-	imagemin = require('gulp-imagemin');
-	cache = require('gulp-cache');
+	imagemin = require('gulp-imagemin'),
+	hint = require('gulp-jshint'),
+	uglify = require('gulp-uglify'),
+	web = require('gulp-webserver'),
+	wrap = require('gulp-wrap');
 
-
-var do_browserify = true;
-var src = '/';
-var dest = 'app/';
+var do_browserify = true,
+	src = '/',
+	dest = 'app/',
+	bowerStyles = ['!bower_components/**/*.min.css', 'bower_components/**/*.css'],
+	bowerScripts = 'bower_components/**/*.min.js';
 
 gulp.task('hint', function() {
 	gulp.src(dest + 'js/app.js')
@@ -44,13 +48,15 @@ gulp.task('sass', function() {
 
 gulp.task('libs', function() {
 
-	gulp.src('bower_components/**/*.min.js')
+	gulp.src(bowerScripts)
 	.pipe(concat('libs.js'))
 	.pipe(gulp.dest(dest + 'js'));
 
-	gulp.src('bower_components/**/*.css')
-	.pipe(concat('libs.css'))
-	.pipe(gulp.dest(dest + 'css'));
+	gulp.src(bowerStyles)
+	.pipe(flatten())
+	.pipe(cssmin())
+	.pipe(rename({suffix: '.min'}))
+	.pipe(gulp.dest(dest + 'css/libs'));
 });
 
 if(do_browserify) // there's a better way to do this
