@@ -1,6 +1,5 @@
 
-$(function() {
-    // console.log(siick);
+$(document).ready ( function() {
     $('.fade').slick({
         dots: false,
         infinite: true,

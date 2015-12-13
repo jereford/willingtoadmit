@@ -1,7 +1,16 @@
+::-moz-selection {
+  background-color: #ff0082; }
+
+::selection {
+  background-color: #ff0082; }
+
 html {
   height: 100vh;
   margin: 0;
   padding: 0; }
+
+section.container {
+  height: 100vh; }
 
 body {
   height: 100vh;
