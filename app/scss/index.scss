@@ -1,11 +1,12 @@
 
+$pink : #ff0082;
 
 ::-moz-selection {
-  background-color: #ff0082;
+  background-color: $pink;
 }
 
 ::selection {
-  background-color: #ff0082;
+  background-color: $pink;
 }
 
 html {
