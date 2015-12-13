@@ -15,6 +15,8 @@ Use the following command to run local server:
 gulp
 ```
 
+Note: Currently you need to make sure to remove the 'bower_components/basscss/src' folder before you run your gulp tasks. Incase you forgot, run 'gulp libs' again.
+
 ## Production
 We use github pages to push our site live using a gulp task:
 ```
