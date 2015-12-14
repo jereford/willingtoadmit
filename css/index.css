@@ -1,0 +1,114 @@
+/* Colors */
+/* Highlights */
+::-moz-selection {
+  background-color: #ff0082; }
+::selection {
+  background-color: #ff0082; }
+
+/* Type */
+h1 {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 1.3em;
+  margin: 0px;
+  padding: 0px;
+  color: #ffffff; }
+
+h2 {
+  font-weight: 300;
+  font-size: 32px;
+  color: #777;
+  line-height: 1.6em; }
+
+p {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.8em;
+  color: #ffffff; }
+
+em {
+  font-weight: 500;
+  font-style: italic; }
+
+a {
+  color: #3C3C3C;
+  text-decoration: none;
+  -webkit-transition: all 0.075s ease-in-out 0.075s;
+  transition: all 0.075s ease-in-out 0.075s; }
+
+/* Base */
+.container {
+  height: 100vh; }
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  text-align: left;
+  background: -webkit-linear-gradient(330deg, #ff0082, #00339f, #9b92fc);
+  background: linear-gradient(120deg, #ff0082, #00339f, #9b92fc);
+  background-size: 400% 400%;
+  -webkit-animation: bg-gradient 30s ease infinite;
+          animation: bg-gradient 30s ease infinite; }
+
+.outermost-container {
+  width: 100%;
+  margin: 0 auto; }
+
+.header {
+  padding: 40px 0px;
+  margin: 0 auto;
+  display: block;
+  text-align: center; }
+
+.header a:hover {
+  opacity: 0.85; }
+
+/* Components */
+.logo {
+  display: block;
+  width: 200px;
+  height: 53px;
+  margin: 0 auto; }
+
+.quote {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center; }
+
+.social {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 20px; }
+
+.twitter-icon {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 25%;
+  color: #ffffff;
+  display: inline-block; }
+
+.social a {
+  text-decoration: none; }
+
+/* Animations */
+@-webkit-keyframes bg-gradient {
+  0% {
+    background-position: 15% 0%; }
+  50% {
+    background-position: 85% 100%; }
+  100% {
+    background-position: 15% 0%; } }
+@keyframes bg-gradient {
+  0% {
+    background-position: 15% 0%; }
+  50% {
+    background-position: 85% 100%; }
+  100% {
+    background-position: 15% 0%; } }
