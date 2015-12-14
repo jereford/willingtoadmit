@@ -6,9 +6,9 @@ var gulp = require('gulp'),
 	clean = require('gulp-clean'),
 	concat = require('gulp-concat'),
 	declare = require('gulp-declare'),
-	evilIcons = require("gulp-evil-icons"),
 	flatten = require('gulp-flatten'),
 	filter = require('gulp-filter'),
+	ghPages = require('gulp-gh-pages'),
 	imSoStylish = require('jshint-stylish'),
 	cssmin = require('gulp-cssmin'),
 	rename = require('gulp-rename'),
@@ -51,6 +51,11 @@ gulp.task('sass', function() {
 		}))
 		.pipe(autoprefixer())
 		.pipe(gulp.dest(dest + 'css'));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src(dest + "**/*")
+    .pipe(ghPages());
 });
 
 gulp.task('libs', function() {
