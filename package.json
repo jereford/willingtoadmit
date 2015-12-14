@@ -7,6 +7,7 @@
   "devDependencies": {
     "dedupe": "^1.0.2",
     "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-browserify": "~0.5.0",
     "gulp-cache": "^0.4.1",
     "gulp-clean": "~0.3.1",

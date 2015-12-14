@@ -1,10 +1,16 @@
 
-$(document).ready ( function() {
-    $('.fade').slick({
-        dots: false,
+$(function() {
+    console.log('running');
+
+    // var slider = $('#slider');
+    $('.slider').slick({
+        dots: true,
         infinite: true,
-        speed: 800,
+        speed: 100,
         fade: true,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        autoplay: true,
+        variableWidth: true
     });
+
 });

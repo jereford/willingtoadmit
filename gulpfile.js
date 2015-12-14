@@ -1,10 +1,12 @@
 
 var gulp = require('gulp'),
+	autoprefixer = require('gulp-autoprefixer'),
 	browserify = require('gulp-browserify'),
 	cache = require('gulp-cache'),
 	clean = require('gulp-clean'),
 	concat = require('gulp-concat'),
 	declare = require('gulp-declare'),
+	evilIcons = require("gulp-evil-icons"),
 	flatten = require('gulp-flatten'),
 	filter = require('gulp-filter'),
 	imSoStylish = require('jshint-stylish'),
@@ -16,6 +18,8 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	web = require('gulp-webserver'),
 	wrap = require('gulp-wrap');
+
+
 
 var do_browserify = true,
 	src = '/',
@@ -33,7 +37,7 @@ gulp.task('hint', function() {
 		.pipe(hint.reporter('jshint-stylish'));
 });
 
- gulp.task('images', function() {
+gulp.task('images', function() {
   return gulp.src('images/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
     .pipe(gulp.dest(dest + 'img'));
@@ -41,8 +45,11 @@ gulp.task('hint', function() {
 
 gulp.task('sass', function() {
 
-	gulp.src(dest + 'scss/**/*.scss')
-		.pipe(sass())
+	return gulp.src(dest + 'scss/**/*.scss')
+		.pipe(sass({
+			 "sourcemap=none": true // hack to allow auto-prefixer to work
+		}))
+		.pipe(autoprefixer())
 		.pipe(gulp.dest(dest + 'css'));
 });
 

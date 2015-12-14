@@ -12,6 +12,7 @@
     "jquery": "~2.1.4",
     "basscss": "~7.0.4",
     "slick-carousel": "~1.5.9",
-    "normalize-css": "normalize.css#~3.0.3"
+    "normalize-css": "normalize.css#~3.0.3",
+    "remodal": "~1.0.6"
   }
 }
